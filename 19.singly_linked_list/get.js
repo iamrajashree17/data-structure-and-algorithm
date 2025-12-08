@@ -27,7 +27,7 @@ class SinglyLinkedList {
     }
 
     get(index) {
-        if(index < 0 || index >= this.length) return null;
+        if (index < 0 || index >= this.length) return null;
         let i = 0;
         let current = this.head;
 
@@ -46,7 +46,7 @@ list.push("Saanvi");
 list.push("Rachan");
 
 console.log(list);
-console.log(list.get(1));
+console.log(list.get(2));
 
 
 // node get.js
