@@ -44,8 +44,7 @@ class SinglyLinkedList {
     if (node) {
         node.val = val;
         return true;
-    }
-    
+    }Z
 
     return false;
    }
