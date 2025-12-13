@@ -17,9 +17,9 @@ class HashTable {
 }
 
 
-let hasTable = new HashTable();
-console.log(hasTable._hash("cyan"));
-console.log(hasTable._hash("pink"));
+let hashTable = new HashTable();
+console.log(hashTable._hash("cyan"));
+console.log(hashTable._hash("pink"));
 
 
 

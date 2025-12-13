@@ -25,14 +25,15 @@ class HashTable {
 }
 
 
-let hasTable = new HashTable();
+let hashTable = new HashTable();
 
-hasTable.set("hello world", "goodbye!");
-hasTable.set("dogs", " are cool");
-hasTable.set("cats", "are fine");
-hasTable.set("i love", "pizza");
-hasTable.set("hi", "bye");
-hasTable.set("french", "fries");
-console.log(hasTable.keyMap);
+hashTable.set("hello world", "goodbye!");
+hashTable.set("dogs", " are cool");
+hashTable.set("cats", "are fine");
+hashTable.set("i love", "pizza");
+hashTable.set("hi", "bye");
+hashTable.set("Hi", "Hello");
+hashTable.set("french", "fries");
+console.log(hashTable.keyMap);
 
 // node set.js

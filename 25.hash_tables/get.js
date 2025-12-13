@@ -38,14 +38,16 @@ class HashTable {
         return undefined;
     }
 }
-let hasTable = new HashTable();
-hasTable.set("hello world", "goodbye!");
-hasTable.set("dogs", " are cool");
-hasTable.set("cats", "are fine");
-hasTable.set("i love", "my family");
-hasTable.set("hi", "bye");
-hasTable.set("french", "fries");
+let hashTable = new HashTable();
+hashTable.set("hello world", "goodbye!");
+hashTable.set("dogs", " are cool");
+hashTable.set("cats", "are fine");
+hashTable.set("i love", "my family");
+hashTable.set("hi", "bye");
+hashTable.set("french", "fries");
 
-console.log(hasTable.get("french"));
-console.log(hasTable.get("hi"));
-console.log(hasTable.get("i love"));
+console.log(hashTable.get("french"));
+console.log(hashTable.get("hi"));
+console.log(hashTable.get("i love"));
+
+// node get.js
