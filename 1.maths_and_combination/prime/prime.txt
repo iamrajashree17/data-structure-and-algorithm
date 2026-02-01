@@ -1,0 +1,67 @@
+Prime Number Algorithms and Sieve Techniques
+
+A prime number is a natural number greater than 1 that has exactly two distinct positive divisors — 1 and itself.
+
+Basic Primality Check: To check if a number n is prime, try dividing it by numbers from 2 to n-1. If any number divides it, then n is not prime; otherwise, it is.
+
+Optimized Method (Square Root Check): We only need to check up to √n because if n has a factor larger than √n, the corresponding smaller factor must be less than √n.
+
+So if no number from 2 to √n divides n, then n is prime
+
+
+Sieve of Eratosthenes: The Sieve of Eratosthenes is an efficient algorithm to find all prime numbers up to a given number n.
+
+Note: It is much faster than checking each number individually using the basic method.
+
+
+Prime Factorization Techniques:
+Optimised Trial Division:
+
+Try dividing n by all numbers up to √n, starting from 2.
+After removing all factors of 2, check only odd numbers.
+If n is still greater than 1, it's a prime factor itself.
+Using Sieve + SPF (Smallest Prime Factor):
+
+The sieve precomputes and stores the smallest prime factor (SPF) for every number up to n.
+Then, to factorize any number, we repeatedly look up spf[n] and divide n by it, collecting the prime factors efficiently.
+We can also count the number of Prime factors using this approach.
+
+Number of Prime Factor:
+
+If the prime factorization of a number n is: 
+n=p 
+1
+e 
+1
+​
+ 
+​
+ ×p 
+2
+e 
+2
+​
+ 
+​
+ ×⋯×p 
+k
+e 
+k
+​
+ 
+​
+  Then the total number of divisors of n is:
+(e 
+1
+​
+ +1)×(e 
+2
+​
+ +1)×⋯×(e 
+k
+​
+ +1).
+
+Each exponent eᵢ gives us (eᵢ + 1) choices (from pᵢ⁰ to pᵢ^eᵢ) in forming a divisor.
+
+Multiplying all such choices gives the total number of divisors
