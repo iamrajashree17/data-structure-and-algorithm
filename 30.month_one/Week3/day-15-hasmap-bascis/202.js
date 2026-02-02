@@ -25,7 +25,7 @@ function isHappy(n) {
     let set = new Set();
 
     while (n !== 1) {
-        if(set.has(n)) return false;
+        if (set.has(n)) return false;
 
         set.add(n);
         n = nextNum(n);
