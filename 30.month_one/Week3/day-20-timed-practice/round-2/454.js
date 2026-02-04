@@ -1,0 +1,52 @@
+/* 454. 4Sum II
+Given four integer arrays nums1, nums2, nums3, and nums4 all of length n, 
+return the number of tuples (i, j, k, l) such that:
+0 <= i, j, k, l < n
+nums1[i] + nums2[j] + nums3[k] + nums4[l] == 0
+
+Example 1:
+Input: nums1 = [1,2], nums2 = [-2,-1], nums3 = [-1,2], nums4 = [0,2]
+Output: 2
+Explanation:
+The two tuples are:
+1. (0, 0, 0, 1) -> nums1[0] + nums2[0] + nums3[0] + nums4[1] = 1 + (-2) + (-1) + 2 = 0
+2. (1, 1, 0, 0) -> nums1[1] + nums2[1] + nums3[0] + nums4[0] = 2 + (-1) + (-1) + 0 = 0
+
+Example 2:
+Input: nums1 = [0], nums2 = [0], nums3 = [0], nums4 = [0]
+Output: 1
+*/
+
+function fourSumCount(nums1, nums2, nums3, nums4) {
+    const map = new Map();
+    let count = 0;
+
+    for (let a of nums1) {
+        for (let b of nums2) {
+            const sum = a + b;
+            map.set(sum, (map.get(sum) || 0) + 1);
+        }
+    }
+
+    for (let c of nums3) {
+        for (let d of nums4) {
+            const target = - (c + d);
+            
+            if (map.has(target)) count += map.get(target);
+        }
+    }
+    return count
+}
+
+let nums1 = [1, 2], nums2 = [-2, -1], nums3 = [-1, 2], nums4 = [0, 2];
+console.log(fourSumCount(nums1, nums2, nums3, nums4));  // Output: 2
+
+let numsA = [0], numsB = [0], numsC = [0], numsD = [0];
+console.log(fourSumCount(numsA, numsB, numsC, numsD));  // Output: 1
+
+
+let A=[1,1], B=[-1], C=[0], D=[0]
+console.log(fourSumCount(A, B, C, D));  // Output: 2
+// node 454.js
+
+// time: o(n2)
