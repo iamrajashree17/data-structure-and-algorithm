@@ -64,7 +64,7 @@ function evalRPN(tokens) {
             stack.push(Number(token))
         }
     }
-    return stack[0];
+    return stack.pop();
 }
 
 let  tokens = ["2","1","+","3","*"] // 9
