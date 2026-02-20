@@ -1,5 +1,6 @@
 /* 410. Split Array Largest Sum
-Given an integer array nums and an integer k, split nums into k non-empty subarrays such that the largest sum of any subarray is minimized.
+Given an integer array nums and an integer k, split nums into k non-empty subarrays such that the largest 
+sum of any subarray is minimized.
 Return the minimized largest sum of the split.
 A subarray is a contiguous part of the array.
 
@@ -21,27 +22,26 @@ function splitArray(nums, k) {
     let right = nums.reduce((a, b) => a + b, 0);
     let ans = right;
 
-    while (left <= right) {
+    while(left <= right) {
         let mid = (left + right) >> 1;
 
-        let pieces = 1;
+        let subArrays = 1;
         let sum = 0;
 
-        for (let num of nums) {
-            if(sum + num > mid) {
-                pieces++;
+        for(let num of nums) {
+            if (sum + num > mid) {
+                subArrays++;
                 sum = 0;
             }
             sum += num;
         }
 
-        if (pieces <= k) {
+        if (subArrays <= k) {
             ans = mid;
             right = mid - 1;
         } else {
             left = mid + 1;
         }
-
     }
     return ans;
 }
