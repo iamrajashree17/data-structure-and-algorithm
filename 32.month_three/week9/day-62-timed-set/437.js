@@ -25,7 +25,6 @@ function countFrom(root, targetSum) {
 
     let count = 0;
 
-
     if (targetSum === node.val) count++;
 
     count += countFrom(root.left, targetSum - node.val);
