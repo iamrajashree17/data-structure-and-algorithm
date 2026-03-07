@@ -1,0 +1,18 @@
+- Preorder + Inorder
+- Sorted array → BST
+- Merge trees
+
+This is **core interview tree coverage**.
+
+---
+
+# 📈 Your Current Level
+
+You can now:
+
+- Identify tree patterns quickly
+- Solve medium tree problems
+- Understand recursion deeply
+- Handle BFS and DFS
+
+That’s **exactly where FAANG prep wants you**.
