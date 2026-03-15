@@ -26,25 +26,7 @@ Output: []
 */
 
 function mergeKLists(lists) {
-    let heap = new MyMinHeap();
-
-    for (let list of lists) {
-        if(list) heap.push(list);
-    }
-
-    let dummy = new ListNode(0);
-    let current = dummy;
-
-    while (heap.size()) {
-        let node = heap.pop();
-
-        current.next = node;
-        current = current.next;
-
-        if (node.next) heap.push(node.next)
-    }
-
-    return dummy.next;
+     
 }
 
 class MyMinHeap {
