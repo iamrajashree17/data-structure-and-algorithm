@@ -54,3 +54,5 @@ console.log(canCompleteCircuit(gas, cost));
 
 gas = [2,3,4], cost = [3,4,3]
 console.log(canCompleteCircuit(gas, cost));
+
+console.log(canCompleteCircuit([5,1,2,3,4], [4,4,1,5,1]));
